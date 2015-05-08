@@ -6,6 +6,9 @@ $(call inherit-product, vendor/beanstalk/config/common_full_phone.mk)
 # Enhanced NFC
 $(call inherit-product, vendor/beanstalk/config/nfc_enhanced.mk)
 
+TARGET_SCREEN_WIDTH := 1440
+TARGET_SCREEN_HEIGHT := 2560
+
 PRODUCT_NAME := bs_vs985
 
 PRODUCT_BUILD_PROP_OVERRIDES += \

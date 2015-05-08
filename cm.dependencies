@@ -3,4 +3,9 @@
     "repository": "android_device_lge_g3-common",
     "target_path": "device/lge/g3-common"
   }
+  {
+    "remote": "lge",
+    "repository": "android_kernel_lge_vs985",
+    "target_path": "kernel/lge/g3"
+  }
 ]
