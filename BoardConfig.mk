@@ -36,10 +36,10 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 27325360128
 
 # Enabling F2FS Out of the Box
 TARGET_USERIMAGES_USE_F2FS := true
-PRODUCT_PACKAGES += \
-  mkfs.f2fs \
-  fsck.f2fs \
-  fibmap.f2fs
+#PRODUCT_PACKAGES += \
+#  mkfs.f2fs \
+#  fsck.f2fs \
+#  fibmap.f2fs
 
 # Recovery
 TARGET_RECOVERY_FSTAB := device/lge/vs985/rootdir/etc/fstab.g3
