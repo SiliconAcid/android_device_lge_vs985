@@ -22,11 +22,15 @@ $(call inherit-product-if-exists, vendor/lge/vs985/vs985-vendor.mk)
 
 # Audio
 PRODUCT_COPY_FILES += \
-    device/lge/g3-common/configs/mixer_paths_qcwcn.xml:system/etc/mixer_paths.xml
+    device/lge/g3-common/configs/audo//mixer_paths_qcwcn.xml:system/etc/mixer_paths.xml
 
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf
+
+# NFC
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:system/etc/permissions/android.hardware.nfc.hce.xml
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -36,15 +40,20 @@ PRODUCT_PACKAGES += \
     init.galbi.bt.sh \
     init.galbi.bt_vendor.rc
 
-# Thermal
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf
+# Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_g3
 
 # Wifi
 PRODUCT_PACKAGES += \
     hostapd_default.conf \
     libwcnss_qmi \
     wcnss_service
+
+# NFC packages 
+PRODUCT_PACKAGES += \
+    NfcNci \
+    nfc_nci.pn54x.default
 
 PRODUCT_COPY_FILES += \
     device/lge/g3-common/wcnss/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
